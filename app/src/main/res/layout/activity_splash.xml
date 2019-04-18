@@ -19,6 +19,12 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:id="@+id/btn_user_login"/>
+        <Button
+                android:text="注册"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/btn_user_register"/>
     </LinearLayout>
     <RelativeLayout
             android:layout_width="match_parent"

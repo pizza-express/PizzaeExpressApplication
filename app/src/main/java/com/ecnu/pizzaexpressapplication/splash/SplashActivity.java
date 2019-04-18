@@ -13,6 +13,7 @@ import com.ecnu.pizzaexpressapplication.base.PizzaExpressBaseActivity;
 import com.ecnu.pizzaexpressapplication.base.PizzaExpressBaseApplication;
 import com.ecnu.pizzaexpressapplication.login.LoginActivity;
 import com.ecnu.pizzaexpressapplication.main.MainActivity;
+import com.ecnu.pizzaexpressapplication.register.RegisterActivity;
 
 public class SplashActivity extends PizzaExpressBaseActivity {
 
@@ -33,6 +34,7 @@ public class SplashActivity extends PizzaExpressBaseActivity {
     };
     private LinearLayout ll_splash_btn_group;
     private Button btn_user_login;
+    private Button btn_user_register;
     private ImageView iv_splash;
 
     @Override
@@ -44,6 +46,13 @@ public class SplashActivity extends PizzaExpressBaseActivity {
             return;
         }
         ll_splash_btn_group = (LinearLayout) findViewById(R.id.ll_splash_btn_group);
+        btn_user_register = (Button) findViewById(R.id.btn_user_register);
+        btn_user_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
+            }
+        });
         btn_user_login = (Button) findViewById(R.id.btn_user_login);
         btn_user_login.setOnClickListener(new View.OnClickListener() {
             @Override
